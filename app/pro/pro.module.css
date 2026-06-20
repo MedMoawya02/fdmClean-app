@@ -26,7 +26,7 @@
 .nav-badge{background:rgba(46,125,50,.2);color:var(--g500);border:1px solid rgba(46,125,50,.3);font-size:11px;font-weight:700;padding:3px 8px;border-radius:20px;letter-spacing:.5px}
 
 /* HERO - dark enterprise */
-.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(150deg,#0a1f0b 0%,#0f2210 40%,#0a1f0b 100%);padding:140px 24px 70px;position:relative;overflow:hidden}
+.hero{min-height:100vh;width: 100%;display:flex;justify-content: center;align-items:center;background:linear-gradient(150deg,#0a1f0b 0%,#0f2210 40%,#0a1f0b 100%);padding:140px 24px 70px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:-200px;right:-200px;width:700px;height:700px;background:radial-gradient(circle,rgba(46,125,50,.15) 0%,transparent 65%);pointer-events:none}
 .hero::after{content:'';position:absolute;bottom:-100px;left:-100px;width:400px;height:400px;background:radial-gradient(circle,rgba(46,125,50,.08) 0%,transparent 65%);pointer-events:none}
 .hero-inner{max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 480px;gap:64px;align-items:center;width:100%;position:relative}

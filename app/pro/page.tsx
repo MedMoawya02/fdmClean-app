@@ -145,7 +145,7 @@ export default function ProPage() {
             </div>
           </div>
 
-          <div className={`${styles["devis-card"]} fi`}>
+          {/* <div className={`${styles["devis-card"]} fi`}>
             <div className={styles["dc-header"]}>
               <h3>Devis rapide</h3>
               <p>Réponse garantie sous 24h</p>
@@ -185,7 +185,7 @@ export default function ProPage() {
               </Link>
               <div className={styles["dc-note"]}>⚡ Devis personnalisé sous 24h · Sans engagement</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
 
