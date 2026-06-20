@@ -1,6 +1,5 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import TrustBand from "@/components/TrustBand";
 import Stats from "@/components/Stats";
@@ -17,7 +16,6 @@ export default function HomePage() {
 
   return (
     <>
-      <Navbar />
       <Hero />
       <TrustBand />
       <Stats />
