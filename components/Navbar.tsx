@@ -38,7 +38,7 @@ export default function Navbar() {
             <div className="sep"></div>
             <span>Lun–Sam · 8h–18h</span>
             <div className="sep"></div>
-            <Link href="/fdm-inscription">Vous êtes agente ? Inscrivez-vous →</Link>
+            <Link href="/fdm-inscription?type=agent">Vous êtes agente ? Inscrivez-vous →</Link>
           </div>
         </div>
 
@@ -121,7 +121,7 @@ export default function Navbar() {
           📝 Blog
         </a>
         <div className="mm-divider"></div>
-        <Link href="/fdm-inscription" className="mm-link" onClick={() => setMenuOpen(false)}>
+        <Link href="/fdm-inscription?type=agent" className="mm-link" onClick={() => setMenuOpen(false)}>
           👤 Inscription / Connexion
         </Link>
         <div className="mm-actions">

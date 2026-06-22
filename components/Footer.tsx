@@ -213,7 +213,7 @@ export default function Footer() {
             <a href="https://femmesdemenage.ma/conditions-generales-de-vente-cgv/" target="_blank" rel="noopener">
               CGV
             </a>
-            <Link href="/fdm-inscription">Inscription agente</Link>
+            <Link href="/fdm-inscription?type=agent">Inscription agente</Link>
           </div>
         </div>
       </div>
