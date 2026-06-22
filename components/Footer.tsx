@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const GS_URL =
   "https://script.google.com/macros/s/AKfycbwtUQdKdMY6EKrR9gNBk8ker9SbcphNDIhe2DQwHVZr0FeI08DgzOhBXXccK-ssFmcK/exec";
@@ -34,7 +35,7 @@ export default function Footer() {
         source: "footer",
         ts: new Date().toISOString(),
       }),
-    }).catch(() => {});
+    }).catch(() => { });
 
     setSent(true);
     setPhone("");
@@ -44,7 +45,7 @@ export default function Footer() {
   return (
     <footer itemScope itemType="https://schema.org/LocalBusiness">
       {/* Bande lead capture : rappel + WhatsApp */}
-      <div className="footer-lead">
+     {/*  <div className="footer-lead">
         <div className="footer-inner">
           <h3>Pas encore prêt à réserver ? On vous rappelle.</h3>
           <p>Laissez votre numéro, notre équipe vous contacte sous 1h — sans engagement.</p>
@@ -71,7 +72,7 @@ export default function Footer() {
             ou discutez directement sur 💬 WhatsApp
           </a>
         </div>
-      </div>
+      </div> */}
 
       {/* Corps footer : 4 colonnes */}
       <div className="footer-inner">
@@ -91,32 +92,35 @@ export default function Footer() {
               entreprises.
             </p>
             <div className="footer-social">
+
               <a
                 href="https://www.facebook.com/femmesdemenage.ma"
-                className="footer-soc"
+                className="footer-soc facebook"
                 target="_blank"
                 rel="noopener"
                 aria-label="Facebook"
               >
-                f
+                <FaFacebookF />
               </a>
+
               <a
                 href="https://www.instagram.com/femmesdemenage.ma"
-                className="footer-soc"
+                className="footer-soc instagram"
                 target="_blank"
                 rel="noopener"
                 aria-label="Instagram"
               >
-                in
+                <FaInstagram />
               </a>
+
               <a
                 href="https://www.linkedin.com/company/femmesdemenage-ma/"
-                className="footer-soc"
+                className="footer-soc linkedin"
                 target="_blank"
                 rel="noopener"
                 aria-label="LinkedIn"
               >
-                li
+                <FaLinkedinIn />
               </a>
             </div>
           </div>
@@ -196,7 +200,7 @@ export default function Footer() {
       <div className="footer-inner">
         <div className="footer-bottom">
           <span className="footer-bottom-left">
-            © 2024 <span itemProp="name">FDM Clean</span> ·{" "}
+            © 2026 <span itemProp="name">FDM Clean</span> ·{" "}
             <a
               href="https://fdmclean.ma"
               target="_blank"

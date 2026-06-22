@@ -122,7 +122,49 @@
 .temo-stars span{color:var(--gold);font-size:14px}
 .temo-text{font-size:14px;color:var(--n500);line-height:1.75;font-style:italic;margin-bottom:16px}
 .temo-author{font-size:13px;font-weight:600;color:var(--n600)}
+/* animations */
+.trusted-strip {
+  margin-top: 40px;
+  overflow: hidden;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  padding: 18px 0;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+}
 
+.trusted-track {
+  display: flex;
+  gap: 40px;
+  width: max-content;
+  animation: scrollLeft 18s linear infinite;
+}
+
+.trusted-item {
+  white-space: nowrap;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--g700);
+  background: #fff;
+  padding: 10px 16px;
+  border-radius: 999px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.trusted-item:hover {
+  transform: translateY(-3px);
+  color: var(--n900);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
 /* DEVIS SECTION */
 .devis-section{padding:80px 24px;background:linear-gradient(155deg,#f0f7f0,#fefffe)}
 .devis-section-inner{max-width:800px;margin:0 auto;text-align:center}

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import NavbarWrapper from "@/components/NavbarWrapper";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Femmes de Ménage Maroc — Particuliers, Entreprises & Annuaire d'agentes",
@@ -77,7 +78,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <NavbarWrapper />
         {children}
-
+        <Footer/>
         {/* Meta / Facebook Pixel */}
         <Script id="fb-pixel" strategy="afterInteractive">
           {`

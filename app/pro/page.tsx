@@ -380,6 +380,21 @@ export default function ProPage() {
               <div className={styles["temo-author"]}>Asmaa R. — Directrice de résidence</div>
             </div>
           </div>
+          {/* animation */}
+          <div className={styles["trusted-strip"]}>
+            <div className={styles["trusted-track"]}>
+
+              <div className={styles["trusted-item"]}>🏢 Groupe Immobilier Casa</div>
+              <div className={styles["trusted-item"]}>🏨 Résidence El Fath</div>
+              <div className={styles["trusted-item"]}>🏬 Atlas Business Center</div>
+              <div className={styles["trusted-item"]}>🏦 Banque Partenaire Maroc</div>
+              <div className={styles["trusted-item"]}>🏢 Groupe Immobilier Casa</div>
+              <div className={styles["trusted-item"]}>🏨 Résidence El Fath</div>
+              <div className={styles["trusted-item"]}>🏬 Atlas Business Center</div>
+              <div className={styles["trusted-item"]}>🏦 Banque Partenaire Maroc</div>
+
+            </div>
+          </div>
         </div>
       </section>
 
@@ -483,10 +498,10 @@ export default function ProPage() {
                   {status === "sending"
                     ? "Envoi en cours..."
                     : status === "sent"
-                    ? "✓ Demande envoyée ! Nous vous contactons sous 24h"
-                    : status === "error"
-                    ? "Erreur — réessayez ou appelez-nous"
-                    : "Envoyer ma demande de devis →"}
+                      ? "✓ Demande envoyée ! Nous vous contactons sous 24h"
+                      : status === "error"
+                        ? "Erreur — réessayez ou appelez-nous"
+                        : "Envoyer ma demande de devis →"}
                 </button>
               </div>
             </div>

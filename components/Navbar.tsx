@@ -64,11 +64,8 @@ export default function Navbar() {
                 Entreprises
               </Link>
               <a
-                href="https://femmesdemenage.ma/quisommesnous/"
-                className="nav-link"
-                target="_blank"
-                rel="noopener"
-              >
+                href="/qui-sommes-nous"
+                className="nav-link">
                 Qui sommes-nous
               </a>
               <a

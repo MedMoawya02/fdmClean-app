@@ -107,7 +107,7 @@ export default function InscriptionPage() {
           </div>
         </div>
         <div className={styles.lFooter}>
-          <p>© 2024 Femmes de Ménage · femmesdemenage.ma · 06 95 43 95 95</p>
+          <p>© 2026 Femmes de Ménage · femmesdemenage.ma · 06 95 43 95 95</p>
         </div>
       </aside>
 

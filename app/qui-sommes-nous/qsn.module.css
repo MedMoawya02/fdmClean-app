@@ -1,0 +1,119 @@
+/* ─── VARIABLES (cohérentes avec le reste de l'app) ─── */
+:root{
+  --g900:#1a4d1e;--g700:#2e7d32;--g600:#388e3c;--g500:#43a047;
+  --g100:#e8f5e9;--g50:#f1f8e9;
+  --n900:#1a1a1a;--n800:#1a1a1a;--n700:#333;--n600:#444;--n500:#666;--n400:#888;
+  --n200:#e0e0e0;--n100:#f0f0f0;--n50:#fafafa;
+  --sh-sm:0 1px 4px rgba(0,0,0,.06);
+  --sh-md:0 4px 20px rgba(0,0,0,.09);
+  --sh-lg:0 12px 40px rgba(0,0,0,.12);
+  --r:16px;--r-sm:10px;--tr:.28s cubic-bezier(.4,0,.2,1);
+}
+
+.page{font-family:'DM Sans',sans-serif;color:var(--n900);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* ─── HERO ─── */
+.hero{background:linear-gradient(135deg,var(--g700) 0%,var(--g500) 100%);padding:140px 24px 72px}
+.heroInner{max-width:1120px;margin:0 auto}
+.heroEyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 14px;border-radius:30px;margin-bottom:20px}
+.heroTitle{font-family:'Outfit',sans-serif;font-size:clamp(36px,5vw,64px);font-weight:800;color:#fff;letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
+.heroSub{font-size:17px;color:rgba(255,255,255,.75);line-height:1.75;max-width:580px}
+
+/* ─── VISION SECTION ─── */
+.vision{padding:96px 24px;background:#fff}
+.visionInner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+.visionText .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g700);margin-bottom:14px;display:block}
+.visionText h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--n900);letter-spacing:-1px;margin-bottom:28px}
+.visionPara{font-size:15px;color:var(--n500);line-height:1.85;margin-bottom:22px}
+.visionPara:last-child{margin-bottom:0}
+.accent{color:var(--g700);font-weight:600}
+.visionImg{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sh-lg)}
+.visionImg img{width:100%;height:100%;object-fit:cover;display:block}
+.visionImgOverlay{position:absolute;inset:0;background:linear-gradient(160deg,transparent 55%,rgba(26,77,30,.45))}
+.visionBadge{position:absolute;bottom:24px;right:24px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:12px;padding:12px 16px;display:flex;align-items:center;gap:10px;box-shadow:0 4px 20px rgba(0,0,0,.15)}
+.visionBadge span:first-child{font-size:22px}
+.visionBadgeText strong{display:block;font-size:13px;font-weight:700;color:var(--n900)}
+.visionBadgeText span{font-size:11px;color:var(--n500)}
+
+/* ─── STATS BAND ─── */
+.statsBand{background:linear-gradient(135deg,var(--g900),#1e5c23);padding:56px 24px}
+.statsBandInner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px}
+.statItem{text-align:center}
+.statNum{font-family:'Outfit',sans-serif;font-size:44px;font-weight:800;color:#fff;letter-spacing:-2px;line-height:1}
+.statLabel{font-size:13px;color:rgba(255,255,255,.6);margin-top:6px;line-height:1.4}
+
+/* ─── GROUPE SECTION ─── */
+.groupe{padding:96px 24px;background:var(--n50)}
+.groupeInner{max-width:1120px;margin:0 auto}
+.groupeHeader{text-align:center;margin-bottom:56px}
+.groupeHeader .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g700);margin-bottom:14px;display:block}
+.groupeHeader h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--n900);letter-spacing:-1px;margin-bottom:16px}
+.groupeHeader p{font-size:15px;color:var(--n500);line-height:1.8;max-width:700px;margin:0 auto}
+.groupeGrid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.groupeImg{position:relative;border-radius:24px;overflow:hidden;box-shadow:var(--sh-lg);aspect-ratio:4/5}
+.groupeImg img{width:100%;height:100%;object-fit:cover;display:block}
+.groupeImgBadge{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:12px;padding:10px 18px;white-space:nowrap;font-size:12px;font-weight:600;color:var(--g700);box-shadow:0 4px 16px rgba(0,0,0,.12)}
+.fdmCleanCard{background:#fff;border:1px solid var(--n200);border-radius:var(--r);padding:24px;margin-bottom:20px;transition:all var(--tr)}
+.fdmCleanCard:hover{box-shadow:var(--sh-md);transform:translateY(-2px)}
+.fdmCleanCard h4{font-family:'Outfit',sans-serif;font-size:16px;font-weight:700;color:var(--n900);margin-bottom:8px}
+.fdmCleanCard p{font-size:14px;color:var(--n500);line-height:1.75}
+
+/* ─── SERVICES SECTION ─── */
+.services{padding:96px 24px;background:#fff}
+.servicesInner{max-width:1120px;margin:0 auto}
+.servicesHeader{text-align:center;margin-bottom:56px}
+.servicesHeader .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g700);margin-bottom:14px;display:block}
+.servicesHeader h2{font-family:'Outfit',sans-serif;font-size:clamp(28px,3.5vw,40px);font-weight:800;color:var(--n900);letter-spacing:-1px}
+.servicesGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.serviceCard{background:var(--n50);border:1px solid var(--n200);border-radius:var(--r);padding:32px 26px;transition:all var(--tr);position:relative;overflow:hidden}
+.serviceCard::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--g700),var(--g500));transform:scaleX(0);transform-origin:left;transition:transform .35s ease}
+.serviceCard:hover{box-shadow:var(--sh-md);transform:translateY(-4px);border-color:var(--g200)}
+.serviceCard:hover::before{transform:scaleX(1)}
+.svcIcon{width:52px;height:52px;background:var(--g50);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:18px}
+.serviceCard h3{font-family:'Outfit',sans-serif;font-size:17px;font-weight:700;color:var(--n900);margin-bottom:10px}
+.serviceCard p{font-size:13px;color:var(--n500);line-height:1.75}
+
+/* ─── MISSION SECTION ─── */
+.mission{background:linear-gradient(155deg,var(--g900) 0%,#1e5c23 55%,var(--g700) 100%);padding:96px 24px}
+.missionInner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.missionText .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px;display:block}
+.missionText h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:20px}
+.missionText p{font-size:15px;color:rgba(255,255,255,.7);line-height:1.85;margin-bottom:16px}
+.missionText p:last-child{margin-bottom:0}
+.missionValues{display:flex;flex-direction:column;gap:16px}
+.missionVal{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--r-sm);padding:20px 22px;display:flex;align-items:flex-start;gap:16px;transition:all var(--tr)}
+.missionVal:hover{background:rgba(255,255,255,.13)}
+.missionValIcon{width:40px;height:40px;background:rgba(255,255,255,.12);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.missionValText h4{font-size:14px;font-weight:700;color:#fff;margin-bottom:4px}
+.missionValText p{font-size:12px;color:rgba(255,255,255,.55);line-height:1.55}
+
+/* ─── CTA ─── */
+.cta{padding:80px 24px;background:var(--n50);text-align:center}
+.ctaInner{max-width:640px;margin:0 auto}
+.ctaInner .eyebrow{font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--g700);margin-bottom:14px;display:block}
+.ctaInner h2{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:800;color:var(--n900);letter-spacing:-1px;margin-bottom:16px}
+.ctaInner p{font-size:15px;color:var(--n500);line-height:1.75;margin-bottom:36px}
+.ctaBtns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
+.btnPrimary{display:inline-flex;align-items:center;gap:8px;background:var(--g700);color:#fff;text-decoration:none;padding:14px 28px;border-radius:var(--r-sm);font-size:15px;font-weight:600;transition:all var(--tr)}
+.btnPrimary:hover{background:var(--g600);transform:translateY(-2px);box-shadow:0 8px 24px rgba(46,125,50,.3)}
+.btnOutline{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--g700);text-decoration:none;padding:13px 24px;border-radius:var(--r-sm);font-size:15px;font-weight:600;border:2px solid rgba(46,125,50,.3);transition:all var(--tr)}
+.btnOutline:hover{border-color:var(--g700);background:var(--g50)}
+
+/* ─── FADE IN ─── */
+.fi{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.fi.v{opacity:1;transform:none}
+.fi.d1{transition-delay:.1s}.fi.d2{transition-delay:.2s}.fi.d3{transition-delay:.3s}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .visionInner{grid-template-columns:1fr;gap:40px}
+  .groupeGrid{grid-template-columns:1fr;gap:40px}
+  .missionInner{grid-template-columns:1fr;gap:40px}
+  .statsBandInner{grid-template-columns:repeat(2,1fr)}
+  .servicesGrid{grid-template-columns:1fr}
+  .hero{padding:100px 24px 56px}
+}
+@media(max-width:480px){
+  .statsBandInner{grid-template-columns:1fr 1fr}
+  .ctaBtns{flex-direction:column;align-items:center}
+}
