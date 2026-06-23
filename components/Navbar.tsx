@@ -63,11 +63,12 @@ export default function Navbar() {
               <Link href="/pro" className="nav-link">
                 Entreprises
               </Link>
-              <a
+              <Link
                 href="/qui-sommes-nous"
-                className="nav-link">
+                className="nav-link"
+              >
                 Qui sommes-nous
-              </a>
+              </Link>
               <a
                 href="https://femmesdemenage.ma/blogs/"
                 className="nav-link"
@@ -85,16 +86,17 @@ export default function Navbar() {
               <Link href="/particulier#reserver" className="nav-cta">
                 Réserver →
               </Link>
-              <div
-                className="nav-hamburger"
-                onClick={() => setMenuOpen((o) => !o)}
-                id="hamburger"
-                aria-expanded={menuOpen}
-              >
-                <span></span>
-                <span></span>
-                <span></span>
-              </div>
+            </div>
+
+            <div
+              className="nav-hamburger"
+              onClick={() => setMenuOpen((o) => !o)}
+              id="hamburger"
+              aria-expanded={menuOpen}
+            >
+              <span></span>
+              <span></span>
+              <span></span>
             </div>
           </div>
         </div>
@@ -111,9 +113,9 @@ export default function Navbar() {
         <Link href="/pro" className="mm-link" onClick={() => setMenuOpen(false)}>
           🏢 Entreprises
         </Link>
-        <a href="https://femmesdemenage.ma/quisommesnous/" className="mm-link" target="_blank" rel="noopener">
+        <Link href="/qui-sommes-nous" className="mm-link" onClick={() => setMenuOpen(false)}>
           ℹ️ Qui sommes-nous
-        </a>
+        </Link>
         <a href="https://femmesdemenage.ma/blogs/" className="mm-link" target="_blank" rel="noopener">
           📝 Blog
         </a>

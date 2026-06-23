@@ -14,7 +14,7 @@ export default function CTA() {
           contrat — on a la bonne option pour vous.
         </p>
         <div className="cta-btns">
-          <Link href="/particulier#reserver" className="cta-btn-white">
+          <Link href="/particulier" className="cta-btn-white">
             Réserver une prestation →
           </Link>
           <Link href="/annuaire" className="cta-btn-outline">

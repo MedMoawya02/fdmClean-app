@@ -32,8 +32,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200}
 .logo-text small{display:block;font-size:10px;font-weight:500;color:var(--n400);letter-spacing:.4px}
 /* Liens nav — chaque destination UNE seule fois */
 .nav-links{display:flex;align-items:center;gap:2px}
-.nav-link{font-size:13.5px;font-weight:600;color:var(--n500);text-decoration:none;padding:8px 13px;border-radius:9px;transition:all var(--tr)}
-.nav-link:hover,.nav-link.active{background:var(--n50);color:var(--n800)}
+.nav-link{font-size:13.5px;font-weight:600;color:var(--n500);text-decoration:none;padding:8px 13px;border-radius:9px;transition:all var(--tr);position: relative;}
+.nav-link:hover{background:var(--n50);color:var(--n800)}
+/* ACTIVE LINK */
+.active {
+  color: #0a66c2;
+  font-weight: 600;
+}
+
+/* petit underline animé */
+.active::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 4px;
+  height: 2px;
+  background: #0a66c2;
+  border-radius: 10px;
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+@keyframes underline {
+  from {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  to {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
 /* Nav droite */
 .nav-right{display:flex;align-items:center;gap:8px;flex-shrink:0}
 .nav-wa{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:var(--g700);text-decoration:none;padding:8px 13px;border-radius:9px;border:1.5px solid rgba(46,125,50,.3);transition:all var(--tr)}

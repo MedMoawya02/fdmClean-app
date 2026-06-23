@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 const GS_URL =
@@ -80,11 +81,21 @@ export default function Footer() {
           {/* Colonne brand */}
           <div className="footer-brand">
             <Link href="/" className="logo">
-              <div className="logo-icon">🧹</div>
-              <span className="logo-text">
-                Femmes de Ménage
-                <small>Casablanca · Fès · Bouskoura</small>
-              </span>
+              <div style={{
+                background: "#fff",
+                borderRadius: 10,
+                padding: "6px 12px",
+                display: "inline-flex",
+                alignItems: "center",
+              }}>
+                <Image
+                  src="/logo_fdm.png"
+                  alt="Femmes de Ménage"
+                  width={110}
+                  height={44}
+                  style={{ objectFit: "contain", display: "block" }}
+                />
+              </div>
             </Link>
             <p className="footer-desc" itemProp="description">
               Société qui met à disposition des agentes qualifiées — femme de ménage, nounou,

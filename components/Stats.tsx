@@ -36,7 +36,7 @@ function Counter({ target }: { target: number }) {
               : current + (progress < 1 ? "" : "+")) + "";
         }
         if (progress < 1) requestAnimationFrame(step);
-        else if (el) el.textContent = target >= 1000 ? target / 1000 + "k+" : target + "+";
+        else if (el) el.textContent = target >= 1000 ? target /1000 + "k+" : target + "+";
       };
       requestAnimationFrame(step);
     }
