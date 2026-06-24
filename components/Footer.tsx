@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
-
+import { FaWhatsapp } from "react-icons/fa6";
 const GS_URL =
   "https://script.google.com/macros/s/AKfycbwtUQdKdMY6EKrR9gNBk8ker9SbcphNDIhe2DQwHVZr0FeI08DgzOhBXXccK-ssFmcK/exec";
 
@@ -182,22 +182,30 @@ export default function Footer() {
           <div className="footer-col">
             <h4>Réserver</h4>
             <a href="tel:+212695439595" className="footer-tel">
-              <span style={{ fontSize: 20 }}>📞</span>
-              <span>
-                <span className="footer-tel-num" itemProp="telephone">
-                  06 95 43 95 95
-                </span>
+              <span className="footer-tel-num">
+  📞 06 95 43 95 95
+</span>
                 <span className="footer-tel-sub">Lun au Sam 8h–18h</span>
-              </span>
+              
             </a>
-            <a
+           {/*  <a
               href="https://wa.me/212695439595"
               className="footer-wa-btn"
               target="_blank"
               rel="noopener"
             >
               💬 WhatsApp direct
-            </a>
+            </a> */}
+            <a
+                href="https://wa.me/212695439595"
+                className="footer-wa-btn"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ display: "flex", alignItems: "center", gap: "6px" }}
+              >
+                <FaWhatsapp />
+                WhatsApp
+              </a>
             <p className="footer-addr" itemProp="address">
               Boulevard Abdel Moumen, <strong>Casablanca</strong>
               <br />

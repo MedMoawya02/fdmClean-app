@@ -3,7 +3,7 @@
 import Link from "next/link";
 import styles from "./qsn.module.css";
 import useFadeIn from "@/components/useFadeIn";
-
+import Image from "next/image";
 const SERVICES = [
   {
     icon: "🏠",
@@ -116,7 +116,14 @@ export default function QuiSommesNousPage() {
                 fontSize: 72,
               }}
             >
-              🧹
+              <Image
+                src="/femme.jpg"
+                alt="Femme de ménage"
+                fill
+                style={{
+                  objectFit: "cover",
+                }}
+              />
             </div>
             <div className={styles.visionImgOverlay} />
             <div className={styles.visionBadge}>
@@ -134,10 +141,10 @@ export default function QuiSommesNousPage() {
       <div className={styles.statsBand}>
         <div className={styles.statsBandInner}>
           {[
-            { num: "1 500+", label: "Clients accompagnés" },
-            { num: "100+",   label: "Agentes déclarées" },
-            { num: "8 ans",  label: "D'expérience dans les services" },
-            { num: "3",      label: "Villes couvertes" },
+            { num: "+1 500", label: "Clients accompagnés" },
+            { num: "+100", label: "Agentes déclarées" },
+            { num: "8 ans", label: "D'expérience dans les services" },
+            { num: "3", label: "Villes couvertes" },
           ].map((s, i) => (
             <div className={`${styles.statItem} fi ${i > 0 ? `d${i}` : ""}`} key={s.label}>
               <div className={styles.statNum}>{s.num}</div>
@@ -173,7 +180,12 @@ export default function QuiSommesNousPage() {
                   fontSize: 80,
                 }}
               >
-                🏢
+                <Image
+                  src="/office.jpg"
+                  alt="Bureau professionnel"
+                  fill
+                  style={{ objectFit: "cover" }}
+                />
               </div>
               <div className={styles.groupeImgBadge}>femmes de ménage .ma</div>
             </div>

@@ -1,27 +1,28 @@
+import Image from "next/image";
 const steps = [
   {
-    icon: "🔍",
+    icon: "/search.svg",
     num: 1,
     delay: "d1",
     title: "Choisissez votre service",
     desc: "Réservation clé en main ou parcours de l'annuaire pour trouver votre agente idéale.",
   },
   {
-    icon: "📋",
+    icon: "/checkList.svg",
     num: 2,
     delay: "d2",
     title: "Nous validons ensemble",
     desc: "Notre équipe vous rappelle sous 2h pour confirmer les détails et attribuer l'agente.",
   },
   {
-    icon: "📅",
+    icon: "/ordre-du-jour.svg",
     num: 3,
     delay: "d3",
     title: "L'agente intervient",
     desc: "Elle arrive à l'heure, selon vos instructions, avec le matériel si besoin.",
   },
   {
-    icon: "⭐",
+    icon: "/etoile.svg",
     num: 4,
     delay: "d4",
     title: "Vous notez la prestation",
@@ -44,7 +45,12 @@ export default function HowItWorks() {
           {steps.map((s) => (
             <div className={`step fi ${s.delay}`} key={s.num}>
               <div className="step-circle">
-                {s.icon}
+                <Image
+                  src={s.icon}
+                  alt={s.title}
+                  width={32}
+                  height={32}
+                />
                 <span className="step-num">{s.num}</span>
               </div>
               <h3>{s.title}</h3>

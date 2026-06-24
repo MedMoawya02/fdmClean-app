@@ -257,7 +257,7 @@ footer{background:var(--n800);color:rgba(255,255,255,.55)}
 .footer-col .f-bold{color:rgba(255,255,255,.7);font-weight:600}
 .footer-col .f-muted{color:rgba(255,255,255,.28);font-size:12px;margin-top:2px}
 /* Bloc contact */
-.footer-tel{display:flex;align-items:center;gap:9px;padding:11px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;text-decoration:none;margin-bottom:10px;transition:background var(--tr)}
+.footer-tel{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;text-decoration:none;margin-bottom:10px;transition:background var(--tr)}
 .footer-tel:hover{background:rgba(255,255,255,.09)}
 .footer-tel-num{font-size:15px;font-weight:700;color:#fff;line-height:1.2;display:block}
 .footer-tel-sub{font-size:11px;color:rgba(255,255,255,.35);display:block}
@@ -324,4 +324,17 @@ footer{background:var(--n800);color:rgba(255,255,255,.55)}
   .cta-box{padding:36px 20px}
   .footer-lead-form{flex-direction:column}
   .footer-lead-form button{width:100%}
+  .stats-section {
+    padding: 60px 20px;
+  }
+
+  .stats-section .section-inner > div {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: left !important;
+  }
+
+  .stats-section .section-inner > div > div:last-child {
+    text-align: left !important;
+  }
 }

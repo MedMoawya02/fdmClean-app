@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import { FaWhatsapp } from "react-icons/fa6";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -32,8 +34,14 @@ export default function Navbar() {
           <div className="nav-top-inner">
             <a href="tel:+212695439595">📞 06 95 43 95 95</a>
             <div className="sep"></div>
-            <a href="https://wa.me/212695439595" target="_blank" rel="noopener">
-              💬 WhatsApp
+            <a
+              href="https://wa.me/212695439595"
+              target="_blank"
+              rel="noopener noreferrer"
+              className=""
+            >
+              <FaWhatsapp style={{ fontSize: 18 }} />
+              <span>WhatsApp</span>
             </a>
             <div className="sep"></div>
             <span>Lun–Sam · 8h–18h</span>
@@ -45,14 +53,21 @@ export default function Navbar() {
         {/* Barre principale */}
         <div className="nav-main">
           <div className="nav-inner">
-            <Link href="/" className="logo">
+            {/* <Link href="/" className="logo">
               <div className="logo-icon">🧹</div>
               <span className="logo-text">
                 Femmes de Ménage
                 <small>Casablanca · Fès · Bouskoura</small>
               </span>
+            </Link> */}
+            <Link href="/" className="logo">
+              <Image
+                src="/logo_fdm.png"
+                alt="logo"
+                width={130}
+                height={50}
+              />
             </Link>
-
             <div className="nav-links">
               <Link href="/particulier" className="nav-link">
                 Particuliers
@@ -80,8 +95,14 @@ export default function Navbar() {
             </div>
 
             <div className="nav-right">
-              <a href="https://wa.me/212695439595" className="nav-wa" target="_blank" rel="noopener">
-                💬 WhatsApp
+              <a
+                href="https://wa.me/212695439595"
+                className="nav-wa"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <FaWhatsapp />
+                WhatsApp
               </a>
               <Link href="/particulier#reserver" className="nav-cta">
                 Réserver →
