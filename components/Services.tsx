@@ -5,7 +5,7 @@ const services = [
     href: "/particulier",
     cls: "s1",
     delay: "",
-    icon: "🧹",
+    icon: "/menage.svg",
     title: "Femme de ménage",
     desc: "Ménage courant, grand ménage, remise en état, entretien régulier ou ponctuel à domicile.",
     tags: ["Ménage courant", "Grand ménage", "Airbnb"],
@@ -16,7 +16,7 @@ const services = [
     href: "/annuaire?metier=nounou",
     cls: "s2",
     delay: "d1",
-    icon: "👶",
+    icon: "/nounou.svg",
     title: "Nounou",
     desc: "Garde d'enfants à domicile, couchante ou non, avec ou sans expérience petite enfance.",
     tags: ["Garde à domicile", "Couchante", "0–10 ans"],
@@ -27,7 +27,7 @@ const services = [
     href: "/annuaire?metier=cuisiniere",
     cls: "s3",
     delay: "d2",
-    icon: "🍳",
+    icon: "/chef.svg",
     title: "Cuisinière",
     desc: "Cuisine marocaine et internationale, préparation des repas familiaux, grands événements.",
     tags: ["Cuisine marocaine", "Internationale", "Événements"],
@@ -38,7 +38,7 @@ const services = [
     href: "/annuaire?metier=vitrier",
     cls: "s4",
     delay: "d3",
-    icon: "🪟",
+    icon: "/vitrier.svg",
     title: "Vitrier",
     desc: "Nettoyage de vitres, baies vitrées, vérandas, garde-corps en verre, miroirs grands formats.",
     tags: ["Baies vitrées", "Véranda", "Miroirs"],
@@ -65,7 +65,19 @@ export default function Services() {
         <div className="services-grid">
           {services.map((s) => (
             <Link key={s.title} href={s.href} className={`svc-card ${s.cls} fi ${s.delay}`}>
-              <span className="svc-icon">{s.icon}</span>
+              <img
+                src={s.icon}
+                alt={s.title}
+                style={{
+                  width: "48px",
+                  height: "48px",
+                  objectFit: "contain",
+                  display: "block",
+                  marginBottom: "16px",
+                      filter:
+      "invert(39%) sepia(93%) saturate(419%) hue-rotate(83deg) brightness(91%) contrast(90%)",
+                }}
+              />
               <h3>{s.title}</h3>
               <p>{s.desc}</p>
               <div className="svc-tags">

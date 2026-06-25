@@ -540,9 +540,18 @@ export default function ParticulierPage() {
             {faqs.map((item, i) => {
               const isOpen = openFaq === i;
               return (
-                <div className={`${styles["faq-item"]} ${isOpen ? styles.open : ""}`} key={item.q}>
-                  <div className={styles["faq-q"]} onClick={() => setOpenFaq(isOpen ? null : i)}>
-                    {item.q} <span className={styles["faq-arrow"]}>⌄</span>
+                <div
+                  className={`${styles["faq-item"]} ${isOpen ? styles.open : ""}`}
+                  key={item.q}
+                >
+                  <div
+                    className={styles["faq-q"]}
+                    onClick={() => setOpenFaq(isOpen ? null : i)}
+                  >
+                    <span>{item.q}</span>
+                    <span className={styles["faq-icon-btn"]}>
+                      {isOpen ? "×" : "+"}
+                    </span>
                   </div>
                   <div className={`${styles["faq-a"]} ${isOpen ? styles.open : ""}`}>
                     <p>{item.a}</p>

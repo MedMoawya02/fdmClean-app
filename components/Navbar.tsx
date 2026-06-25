@@ -85,9 +85,8 @@ export default function Navbar() {
                 Qui sommes-nous
               </Link>
               <a
-                href="https://femmesdemenage.ma/blogs/"
+                href="/blog"
                 className="nav-link"
-                target="_blank"
                 rel="noopener"
               >
                 Blog
@@ -137,7 +136,7 @@ export default function Navbar() {
         <Link href="/qui-sommes-nous" className="mm-link" onClick={() => setMenuOpen(false)}>
           ℹ️ Qui sommes-nous
         </Link>
-        <a href="https://femmesdemenage.ma/blogs/" className="mm-link" target="_blank" rel="noopener">
+        <a href="/blog" className="mm-link"  rel="noopener">
           📝 Blog
         </a>
         <div className="mm-divider"></div>
