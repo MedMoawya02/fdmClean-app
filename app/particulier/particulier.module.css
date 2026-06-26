@@ -25,7 +25,7 @@
 .btn-nav:hover{background:var(--g600);transform:translateY(-1px)}
 
 /* HERO */
-.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(150deg,#f0f7f0 0%,#fefffe 60%,#fff 100%);padding:80px 24px 60px;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(150deg,#f0f7f0 0%,#fefffe 60%,#fff 100%);padding:120px 24px 60px;position:relative;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;right:0;width:55%;height:100%;background:radial-gradient(ellipse at 80% 40%,rgba(46,125,50,.06) 0%,transparent 65%);pointer-events:none}
 .hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1fr 420px;gap:56px;align-items:center;width:100%}
 
@@ -67,7 +67,7 @@
 .btn-pcard:hover{background:var(--g600);transform:translateY(-1px)}
 
 /* PAIN POINTS */
-.pain{background:var(--n50);padding:80px 24px}
+.pain{background:var(--n50);padding:20px 24px}
 .pain-inner{max-width:1120px;margin:0 auto}
 .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 .pain-card{background:#fff;border-radius:var(--r);padding:28px 24px;border:1px solid var(--n200);transition:all var(--tr)}
@@ -78,7 +78,7 @@
 .pain-card .solution{display:flex;align-items:center;gap:6px;margin-top:12px;font-size:12px;font-weight:600;color:var(--g700)}
 
 /* COMMENT CA MARCHE */
-.steps{padding:80px 24px}
+.steps{padding:20px 24px}
 .steps-inner{max-width:1120px;margin:0 auto}
 .steps-timeline{display:flex;flex-direction:column;gap:0;margin-top:48px;position:relative}
 .step-row{display:grid;grid-template-columns:80px 1fr;gap:28px;align-items:start;padding-bottom:40px;position:relative}
@@ -92,7 +92,7 @@
 .step-tip{display:inline-flex;align-items:center;gap:6px;background:var(--g50);border:1px solid var(--g100);border-radius:20px;padding:5px 12px;font-size:12px;color:var(--g700);font-weight:500;margin-top:10px}
 
 /* FORMULES */
-.formules{background:linear-gradient(155deg,var(--g900),#0d2e10);padding:80px 24px}
+.formules{background:linear-gradient(155deg,var(--g900),#0d2e10);padding:50px 24px}
 .fl-inner{max-width:1120px;margin:0 auto}
 .fl-label{color:rgba(255,255,255,.55);font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
 .fl-title{font-family:'Outfit',sans-serif;font-size:clamp(26px,3.5vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;margin:12px 0 16px}
@@ -116,7 +116,7 @@
 .btn-fl-outline:hover{background:rgba(255,255,255,.08)}
 
 /* REASSURANCE */
-.reassur{padding:80px 24px}
+.reassur{padding:20px 24px}
 .reassur-inner{max-width:1120px;margin:0 auto}
 .reassur-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
 .reassur-card{text-align:center;padding:32px 20px;background:#fff;border:1px solid var(--n200);border-radius:var(--r);transition:all var(--tr)}
@@ -126,7 +126,7 @@
 .reassur-card p{font-size:13px;color:var(--n500);line-height:1.6}
 
 /* AVIS */
-.avis{background:var(--n50);padding:80px 24px}
+.avis{background:var(--n50);padding:20px 24px}
 .avis-inner{max-width:1120px;margin:0 auto}
 .avis-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:48px}
 .avis-card{background:#fff;border-radius:var(--r);padding:26px 22px;border:1px solid var(--n200);transition:all var(--tr)}
@@ -141,7 +141,7 @@
 .avis-detail{font-size:11px;color:var(--n400)}
 
 /* FAQ — style carte image */
-.faq-section{padding:80px 24px;background:var(--n50)}
+.faq-section{padding:20px 24px;background:var(--n50)}
 .faq-inner{max-width:720px;margin:0 auto}
 .faq-list{margin-top:48px;background:#fff;border-radius:16px;border:1px solid var(--n200);overflow:hidden;box-shadow:var(--sh-sm)}
 .faq-item{border-bottom:1px solid var(--n100);transition:background var(--tr)}
@@ -157,7 +157,7 @@
 .faq-a p{padding:0 24px 20px;font-size:13.5px;color:var(--n600);line-height:1.75}
 
 /* CTA FINAL */
-.cta-final{background:var(--g700);padding:80px 24px;text-align:center}
+.cta-final{background:var(--g700);padding:20px 24px;text-align:center}
 .cta-final h2{font-family:'Outfit',sans-serif;font-size:clamp(24px,3.5vw,38px);font-weight:800;color:#fff;letter-spacing:-1px;margin-bottom:12px}
 .cta-final p{font-size:16px;color:rgba(255,255,255,.75);margin-bottom:32px;max-width:520px;margin-left:auto;margin-right:auto}
 .cta-final-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
@@ -181,19 +181,19 @@
   .avis-grid{grid-template-columns:1fr}
 }
 @media(max-width:520px){
-  .hero{padding:30px 20px 50px}
+  .hero{padding:80px 20px 50px}
   .fl-grid{grid-template-columns:1fr}
   .reassur-grid{grid-template-columns:1fr 1fr}
   .step-row{grid-template-columns:52px 1fr;gap:16px}
 }
 
 /* ══════════════ NOUVEAU FORMULAIRE DE RÉSERVATION ══════════════ */
-.resa-section{padding:72px 24px;background:var(--n50)}
+.resa-section{padding:30px 24px;background:var(--n50)}
 .resa-header{text-align:center;max-width:720px;margin:0 auto 32px}
 .resa-header h2{font-family:'Outfit',sans-serif;font-size:clamp(24px,3vw,36px);font-weight:800;color:var(--n900);letter-spacing:-1px;margin-bottom:8px}
 .resa-header p{font-size:15px;color:var(--n500)}
 .resa-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;max-width:1100px;margin:0 auto;align-items:start}
-.resa-grid>div:last-child{position:sticky;top:115px;align-self:start}
+.resa-grid>div:last-child{position:sticky;top:115px;align-self:start;}
 
 /* CARDS */
 .card{background:#fff;padding:24px;border-radius:var(--r);margin-bottom:16px;box-shadow:var(--sh-sm);border:1px solid rgba(0,0,0,.04);transition:box-shadow var(--tr)}

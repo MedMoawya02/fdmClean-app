@@ -64,7 +64,7 @@ export default function Navbar() {
               <Image
                 src="/logo_fdm.png"
                 alt="logo"
-                width={130}
+                width={80}
                 height={50}
               />
             </Link>

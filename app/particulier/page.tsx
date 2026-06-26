@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from "./particulier.module.css";
 import useFadeIn from "@/components/useFadeIn";
 import ReservationForm from "./ReservationForm";
+import Image from "next/image";
 
 const annexes = [
   { icon: "🪟", title: "Nettoyage vitres", desc: "Baies vitrées, vérandas, garde-corps, balcons en verre" },
@@ -401,22 +402,22 @@ export default function ParticulierPage() {
           </h2>
           <div className={styles["reassur-grid"]}>
             <div className={`${styles["reassur-card"]} fi`}>
-              <span className={styles["reassur-icon"]}>🔍</span>
+              <span className={styles["reassur-icon"]}><Image src="search.svg" alt="vérifiées" width={42} height={42} /></span>
               <h3>Vérifiées</h3>
               <p>Vérification des antécédents et entretien pour chaque agente.</p>
             </div>
             <div className={`${styles["reassur-card"]} fi d1`}>
-              <span className={styles["reassur-icon"]}>📚</span>
+              <span className={styles["reassur-icon"]}><Image src="/particulierIcones/formee.svg" alt="formées" width={42} height={42} /></span>
               <h3>Formées</h3>
               <p>Formation aux protocoles de nettoyage professionnels.</p>
             </div>
             <div className={`${styles["reassur-card"]} fi d2`}>
-              <span className={styles["reassur-icon"]}>🛡️</span>
+              <span className={styles["reassur-icon"]}><Image src="/particulierIcones/fiable.svg" alt="fiable" width={42} height={42} /></span>
               <h3>Fiables</h3>
               <p>Sélectionnées sur références et disponibilités vérifiées.</p>
             </div>
             <div className={`${styles["reassur-card"]} fi d3`}>
-              <span className={styles["reassur-icon"]}>📞</span>
+              <span className={styles["reassur-icon"]}><Image src="/particulierIcones/suivie.svg" alt="suivées" width={42} height={42} /></span>
               <h3>Suivies</h3>
               <p>Évaluation après chaque prestation, qualité maintenue.</p>
             </div>

@@ -541,7 +541,7 @@ export default function ReservationForm() {
         </div>
 
         {/* ═══ RIGHT — RÉSUMÉ ═══ */}
-        <div>
+        <div >
           <div className={styles.summary}>
             <h3>🧹 Votre réservation</h3>
 
