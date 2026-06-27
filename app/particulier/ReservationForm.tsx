@@ -541,9 +541,8 @@ export default function ReservationForm() {
         </div>
 
         {/* ═══ RIGHT — RÉSUMÉ ═══ */}
-        <div >
-          <div className={styles.summary}>
-            <h3>🧹 Votre réservation</h3>
+        <div className={styles.summary}>
+          <h3>🧹 Votre réservation</h3>
 
             {[
               { k:"Ville",      v: ville },
@@ -594,7 +593,6 @@ export default function ReservationForm() {
               <div className={styles["trust-item"]}>🔒 Données sécurisées · Sans engagement</div>
               <div className={styles["trust-item"]}>⏱ Confirmation sous 2h par notre équipe</div>
             </div>
-          </div>
         </div>
       </div>
 

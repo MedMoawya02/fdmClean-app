@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Hero() {
   return (
     <section className="hero">
@@ -18,7 +18,7 @@ export default function Hero() {
 
       <div className="cards-grid fi">
         <Link href="/particulier" className="cat-card c-b2c">
-          <div className="card-ico">🏠</div>
+          <div className="card-ico"><Image src="/home.svg" alt="home" width={42} height={42} /></div>
           <div className="card-eyebrow">Particulier · Service géré</div>
           <h2>Je veux qu&apos;on s&apos;occupe de tout</h2>
           <p>
@@ -37,7 +37,7 @@ export default function Hero() {
         </Link>
 
         <Link href="/annuaire" className="cat-card c-ann">
-          <div className="card-ico">🔍</div>
+          <div className="card-ico"><Image src="/search.svg" alt="particulier-autonome" width={42}height={42}/></div>
           <div className="card-eyebrow">Particulier · Autonome</div>
           <h2>Je veux choisir mon agente moi-même</h2>
           <p>Parcourez les profils, comparez les tarifs et l&apos;expérience, puis contactez directement.</p>
@@ -53,7 +53,7 @@ export default function Hero() {
         </Link>
 
         <Link href="/pro" className="cat-card c-b2b">
-          <div className="card-ico">🏢</div>
+          <div className="card-ico"><Image src="/entreprise.svg" alt="entreprise" width={42}height={42}/></div>
           <div className="card-eyebrow">Entreprise · Bureau · Cabinet</div>
           <h2>Nettoyage régulier de mes locaux pro</h2>
           <p>

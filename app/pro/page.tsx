@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 import Link from "next/link";
 import styles from "./pro.module.css";
 import useFadeIn from "@/components/useFadeIn";
-
+import Image from "next/image";
 const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbwtUQdKdMY6EKrR9gNBk8ker9SbcphNDIhe2DQwHVZr0FeI08DgzOhBXXccK-ssFmcK/exec";
 
@@ -63,10 +63,10 @@ const avantages = [
 ];
 
 const processSteps = [
-  { num: 1, icon: "📋", title: "Devis gratuit", desc: "Formulaire en ligne ou appel. Réponse sous 24h avec tarification détaillée." },
-  { num: 2, icon: "🤝", title: "Visite des locaux", desc: "Notre responsable visite vos locaux pour établir un cahier des charges précis." },
-  { num: 3, icon: "👩", title: "Assignation d'équipe", desc: "Nous sélectionnons les agentes adaptées à vos besoins et contraintes." },
-  { num: 4, icon: "✨", title: "Démarrage", desc: "Première intervention dans les 48h suivant la validation. Suivi qualité immédiat." },
+  { num: 1, icon: "/proIcones/formulaire-en-ligne.svg", title: "Devis gratuit", desc: "Formulaire en ligne ou appel. Réponse sous 24h avec tarification détaillée." },
+  { num: 2, icon: "/proIcones/lieux-a-visiter.svg", title: "Visite des locaux", desc: "Notre responsable visite vos locaux pour établir un cahier des charges précis." },
+  { num: 3, icon: "/proIcones/equipe.svg", title: "Assignation d'équipe", desc: "Nous sélectionnons les agentes adaptées à vos besoins et contraintes." },
+  { num: 4, icon: "/proIcones/star.svg", title: "Démarrage", desc: "Première intervention dans les 48h suivant la validation. Suivi qualité immédiat." },
 ];
 
 export default function ProPage() {
@@ -144,48 +144,6 @@ export default function ProPage() {
               </div>
             </div>
           </div>
-
-          {/* <div className={`${styles["devis-card"]} fi`}>
-            <div className={styles["dc-header"]}>
-              <h3>Devis rapide</h3>
-              <p>Réponse garantie sous 24h</p>
-            </div>
-            <div className={styles["dc-body"]}>
-              <div className={styles["dc-field"]}>
-                <label>TYPE DE LOCAL</label>
-                <select defaultValue="Bureau / Open space">
-                  <option>Bureau / Open space</option>
-                  <option>Hôtel / Résidence</option>
-                  <option>Clinique / Cabinet</option>
-                  <option>Commerce / Retail</option>
-                  <option>Entrepôt / Usine</option>
-                </select>
-              </div>
-              <div className={styles["dc-row"]}>
-                <div className={styles["dc-field"]}>
-                  <label>SUPERFICIE (m²)</label>
-                  <input type="number" placeholder="Ex: 250" />
-                </div>
-                <div className={styles["dc-field"]}>
-                  <label>FRÉQUENCE</label>
-                  <select defaultValue="Quotidienne">
-                    <option>Quotidienne</option>
-                    <option>Hebdomadaire</option>
-                    <option>Bihebdo</option>
-                    <option>Mensuelle</option>
-                  </select>
-                </div>
-              </div>
-              <div className={styles["dc-field"]}>
-                <label>VOTRE TÉLÉPHONE</label>
-                <input type="tel" placeholder="06 XX XX XX XX" />
-              </div>
-              <Link href="#devis" className={styles["btn-devis"]} style={{ display: "block", textAlign: "center", textDecoration: "none" }}>
-                Recevoir mon devis →
-              </Link>
-              <div className={styles["dc-note"]}>⚡ Devis personnalisé sous 24h · Sans engagement</div>
-            </div>
-          </div> */}
         </div>
       </section>
 
@@ -193,7 +151,7 @@ export default function ProPage() {
       <div className={styles.stats}>
         <div className={styles["stats-inner"]}>
           <div className={`${styles["stat-item"]} fi`}>
-            <div className={styles["stat-num"]}>200+</div>
+            <div className={styles["stat-num"]}>+200</div>
             <div className={styles["stat-label"]}>Entreprises clientes</div>
           </div>
           <div className={`${styles["stat-item"]} fi d1`}>
@@ -298,7 +256,8 @@ export default function ProPage() {
               <div className={`${styles["ps-item"]} fi ${i === 1 ? "d1" : i === 2 ? "d2" : i === 3 ? "d3" : ""}`} key={s.num}>
                 <div className={styles["ps-circle"]}>
                   <span className={styles["ps-num"]}>{s.num}</span>
-                  {s.icon}
+                  {/* {s.icon} */}
+                  <Image src={s.icon} alt={s.title} width={42}height={42} className={styles["ps-icon"]} />
                 </div>
                 <h3>{s.title}</h3>
                 <p>{s.desc}</p>
