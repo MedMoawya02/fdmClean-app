@@ -1,11 +1,14 @@
-"use client";
+// Server Component — pas de "use client".
+// Le contenu statique est rendu côté serveur (SEO, HTML immédiat).
+// PrestaCard, FaqAccordion, ReservationForm et FadeInObserver restent des client islands.
 
-import { useState } from "react";
 import Link from "next/link";
-import styles from "./particulier.module.css";
-import useFadeIn from "@/components/useFadeIn";
-import ReservationForm from "./ReservationForm";
 import Image from "next/image";
+import styles from "./particulier.module.css";
+import FadeInObserver from "@/components/FadeInObserver";
+import ReservationForm from "./ReservationForm";
+import PrestaCard from "./PrestaCard";
+import FaqAccordion from "./FaqAccordion";
 
 const annexes = [
   { icon: "🪟", title: "Nettoyage vitres", desc: "Baies vitrées, vérandas, garde-corps, balcons en verre" },
@@ -16,40 +19,11 @@ const annexes = [
   { icon: "🏨", title: "Remise en état Airbnb", desc: "Nettoyage complet entre deux locataires, changement du linge inclus." },
 ];
 
-const faqs = [
-  {
-    q: "Dois-je être présent(e) pendant le ménage ?",
-    a: "Non, ce n'est pas obligatoire. Vous pouvez être présent au début pour les consignes, ou nous confier les clés en toute confiance. Nos agentes sont sélectionnées et vérifiées.",
-  },
-  {
-    q: "Fournissez-vous le matériel et les produits ?",
-    a: "Vous pouvez utiliser votre propre matériel, ou opter pour nos produits en supplément (20 DH). Nos agentes sont formées à l'utilisation des deux.",
-  },
-  {
-    q: "Puis-je annuler ou modifier ma réservation ?",
-    a: "Oui, jusqu'à 24h avant la prestation sans frais. Pour les annulations de dernière minute, des frais peuvent s'appliquer selon les conditions générales.",
-  },
-  {
-    q: "Aurai-je toujours la même agente ?",
-    a: "Pour les abonnements, nous faisons en sorte que ce soit toujours la même agente. Pour les one-shot, cela dépend des disponibilités, mais nous veillons à la continuité.",
-  },
-  {
-    q: "Comment vous joindre en cas de problème ?",
-    a: "Par téléphone au 06 95 43 95 95, par WhatsApp ou via notre formulaire. Nous sommes disponibles 7j/7 pour répondre à toutes vos demandes.",
-  },
-];
-
 export default function ParticulierPage() {
-  useFadeIn();
-
-  // Tabs (hero prestations card)
-  const [tab, setTab] = useState<"one" | "abo">("one");
-
-  // FAQ
-  const [openFaq, setOpenFaq] = useState<number | null>(null);
-
   return (
     <div className={styles.page}>
+      <FadeInObserver />
+
       {/* HERO PAS */}
       <section className={styles.hero}>
         <div className={styles["hero-inner"]}>
@@ -92,86 +66,7 @@ export default function ParticulierPage() {
             </div>
           </div>
 
-          <div className={`${styles["presta-card"]} fi`}>
-            <div className={styles["pcard-tabs"]}>
-              <div
-                className={`${styles.ptab} ${tab === "one" ? styles.active : ""}`}
-                onClick={() => setTab("one")}
-              >
-                One shot
-              </div>
-              <div
-                className={`${styles.ptab} ${tab === "abo" ? styles.active : ""}`}
-                onClick={() => setTab("abo")}
-              >
-                Abonnement
-              </div>
-            </div>
-
-            {tab === "one" && (
-              <div className={styles["pcard-content"]}>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>🏠</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>Ménage normal</h4>
-                    <p>4h · Sols, surfaces, cuisine, sdb</p>
-                  </div>
-                  <div className={styles["pi-price"]}>250 DH</div>
-                </div>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>🧹</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>Grand ménage</h4>
-                    <p>Journée · En profondeur</p>
-                  </div>
-                  <div className={styles["pi-price"]}>480 DH</div>
-                </div>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>🌅</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>Journée complète</h4>
-                    <p>8h · Villa ou grand appartement</p>
-                  </div>
-                  <div className={styles["pi-price"]}>480 DH</div>
-                </div>
-              </div>
-            )}
-
-            {tab === "abo" && (
-              <div className={styles["pcard-content"]}>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>📅</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>1 fois/semaine</h4>
-                    <p>~4 interventions/mois</p>
-                  </div>
-                  <div className={styles["pi-price"]}>990 DH</div>
-                </div>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>⭐</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>2 fois/semaine</h4>
-                    <p>~8 interventions/mois · Populaire</p>
-                  </div>
-                  <div className={styles["pi-price"]}>1 900 DH</div>
-                </div>
-                <div className={styles["presta-item"]}>
-                  <div className={styles["pi-icon"]}>💎</div>
-                  <div className={styles["pi-info"]}>
-                    <h4>3 fois/semaine</h4>
-                    <p>~12 interventions/mois</p>
-                  </div>
-                  <div className={styles["pi-price"]}>2 890 DH</div>
-                </div>
-              </div>
-            )}
-
-            <div className={styles["pcard-cta"]}>
-              <Link href="#reserver" className={styles["btn-pcard"]}>
-                Configurer ma prestation →
-              </Link>
-            </div>
-          </div>
+          <PrestaCard />
         </div>
       </section>
 
@@ -537,30 +432,7 @@ export default function ParticulierPage() {
           >
             Questions fréquentes
           </h2>
-          <div className={`${styles["faq-list"]} fi`}>
-            {faqs.map((item, i) => {
-              const isOpen = openFaq === i;
-              return (
-                <div
-                  className={`${styles["faq-item"]} ${isOpen ? styles.open : ""}`}
-                  key={item.q}
-                >
-                  <div
-                    className={styles["faq-q"]}
-                    onClick={() => setOpenFaq(isOpen ? null : i)}
-                  >
-                    <span>{item.q}</span>
-                    <span className={styles["faq-icon-btn"]}>
-                      {isOpen ? "×" : "+"}
-                    </span>
-                  </div>
-                  <div className={`${styles["faq-a"]} ${isOpen ? styles.open : ""}`}>
-                    <p>{item.a}</p>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <FaqAccordion />
         </div>
       </section>
 

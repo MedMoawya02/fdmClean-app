@@ -1,4 +1,7 @@
-"use client";
+// Server Component — pas de "use client".
+// Hero, TrustBand, Services, HowItWorks, Testimonials, CTA sont rendus
+// en HTML côté serveur (indexables immédiatement par Google).
+// Stats et FAQ restent des client islands ("use client" dans leurs fichiers).
 
 import Hero from "@/components/Hero";
 import TrustBand from "@/components/TrustBand";
@@ -8,14 +11,13 @@ import HowItWorks from "@/components/HowItWorks";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
-import Footer from "@/components/Footer";
-import useFadeIn from "@/components/useFadeIn";
+import FadeInObserver from "@/components/FadeInObserver";
 
 export default function HomePage() {
-  useFadeIn();
-
   return (
     <>
+      {/* Monte l'IntersectionObserver pour les animations .fi → .fi.v */}
+      <FadeInObserver />
       <Hero />
       <TrustBand />
       <Stats />
@@ -24,7 +26,6 @@ export default function HomePage() {
       <Testimonials />
       <FAQ />
       <CTA />
-     {/*  <Footer /> */}
     </>
   );
 }
