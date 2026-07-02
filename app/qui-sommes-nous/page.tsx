@@ -187,7 +187,7 @@ export default function QuiSommesNousPage() {
                   style={{ objectFit: "cover" }}
                 />
               </div>
-              <div className={styles.groupeImgBadge}>femmes de ménage .ma</div>
+  {/*             <div className={styles.groupeImgBadge}>femmes de ménage .ma</div> */}
             </div>
 
             <div className="fi d1">

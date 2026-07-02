@@ -12,8 +12,8 @@ const PRICES: Record<string, number> = {
 
 const nameRegex = /^[\p{L}\s\-']{2,40}$/u;
 const phoneRegex = /^(00212|\+212|0)[5-7][0-9]{8}$/;
-const GOOGLE_SHEET_URL =
-  "https://script.google.com/macros/s/AKfycbwtUQdKdMY6EKrR9gNBk8ker9SbcphNDIhe2DQwHVZr0FeI08DgzOhBXXccK-ssFmcK/exec";
+/* const GOOGLE_SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbwtUQdKdMY6EKrR9gNBk8ker9SbcphNDIhe2DQwHVZr0FeI08DgzOhBXXccK-ssFmcK/exec"; */
 const MAX_SUBMISSIONS = 3;
 const MIN_FILL_TIME_MS = 5000;
 const MONTHS_FR = ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
@@ -369,7 +369,7 @@ export default function ReservationForm() {
 
     setSubmitting(true);
     try {
-      await fetch(GOOGLE_SHEET_URL, {
+      await fetch("api/reservation", {
         method: "POST", mode: "no-cors",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),

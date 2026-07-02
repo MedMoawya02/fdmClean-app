@@ -359,3 +359,37 @@ textarea.inp{resize:vertical;min-height:72px}
   .input-grid{grid-template-columns:1fr}
   .extras-grid{grid-template-columns:repeat(2,1fr)}
 }
+@media(max-width:480px){
+  /* ─── EXTRAS ─── */
+  .extras-grid{grid-template-columns:repeat(3,1fr);gap:6px}
+  .extra-item{padding:9px 6px}
+  .extra-ico{font-size:18px}
+  .extra-name{font-size:10px}
+  .extra-price{font-size:9px}
+
+  /* ─── PILLS ─── */
+  .pill{padding:6px 11px;font-size:12px}
+
+  /* ─── INPUTS ─── */
+  .inp{padding:11px 12px;font-size:13px}
+  .inp-label{font-size:11px}
+
+  /* ─── SURFACE ─── */
+  .surface-label{font-size:12px}
+  .surface-value{font-size:14px}
+
+  /* ─── CARD ─── */
+  .card{padding:16px 14px}
+
+  /* ─── RÉSUMÉ ─── */
+  .summary{padding:18px 16px}
+  .summary-row{padding:9px 0}
+  .label,.val{font-size:12px}
+}
+
+@media(max-width:520px){
+  .hero{padding:50px 20px 50px}
+  .fl-grid{grid-template-columns:1fr}
+  .reassur-grid{grid-template-columns:1fr 1fr}
+  .step-row{grid-template-columns:52px 1fr;gap:16px}
+}
